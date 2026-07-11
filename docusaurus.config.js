@@ -55,7 +55,7 @@ const config = {
 
       colorMode: {
         defaultMode: "dark",
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: true,
       },
 
@@ -64,7 +64,7 @@ const config = {
 
         logo: {
           alt: "SilentRoot Logo",
-          src: "img/logo.svg",
+          src: "img/logo.jpg",
         },
 
         items: [
