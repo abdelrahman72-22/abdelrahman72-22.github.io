@@ -1,43 +1,49 @@
 // @ts-check
-import { themes as prismThemes } from 'prism-react-renderer';
+
+import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'SilentRoot',
-  tagline: 'Windows Internals • Malware Research • DFIR • CTI',
-  favicon: 'img/favicon.ico',
+  title: "SilentRoot",
+
+  tagline:
+    "Windows Internals • WinAPI • Malware Development • Malware Analysis • Reverse Engineering",
+
+  favicon: "img/favicon.ico",
 
   future: {
     v4: true,
   },
 
-  url: 'https://abdelrahman72-22.github.io',
-  baseUrl: '/',
+  url: "https://abdelrahman72-22.github.io",
+  baseUrl: "/",
 
-  organizationName: 'abdelrahman72-22',
-  projectName: 'abdelrahman72-22.github.io',
+  organizationName: "abdelrahman72-22",
+  projectName: "abdelrahman72-22.github.io",
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       ({
         docs: {
-          sidebarPath: './sidebars.js',
-          routeBasePath: 'docs',
+          sidebarPath: "./sidebars.js",
+          routeBasePath: "docs",
         },
 
-        blog: false,
+        blog: {
+          showReadingTime: true,
+        },
 
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       }),
     ],
@@ -45,68 +51,74 @@ const config = {
 
   themeConfig:
     ({
-      image: 'img/social-card.png',
+      image: "img/social-card.png",
 
       colorMode: {
-        defaultMode: 'dark',
+        defaultMode: "dark",
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
 
       navbar: {
-        title: 'SilentRoot',
+        title: "SilentRoot",
 
         logo: {
-          alt: 'SilentRoot Logo',
-          src: 'img/logo.svg',
+          alt: "SilentRoot Logo",
+          src: "img/logo.svg",
         },
 
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Documentation',
+            type: "docSidebar",
+            sidebarId: "tutorialSidebar",
+            position: "left",
+            label: "Documentation",
           },
 
           {
-            href: 'https://github.com/abdelrahman72-22',
-            label: 'GitHub',
-            position: 'right',
+            to: "/blog",
+            label: "Blog",
+            position: "left",
+          },
+
+          {
+            href: "https://github.com/abdelrahman72-22",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
 
       footer: {
-        style: 'dark',
+        style: "dark",
 
         links: [
           {
-            title: 'Documentation',
+            title: "Documentation",
             items: [
               {
-                label: 'Windows Internals',
-                to: '/docs/intro',
+                label: "About",
+                to: "/docs/about",
               },
             ],
           },
 
           {
-            title: 'Resources',
+            title: "Blog",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/abdelrahman72-22',
+                label: "Latest Posts",
+                to: "/blog",
               },
             ],
           },
 
           {
-            title: 'About',
+            title: "Resources",
             items: [
               {
-                label: 'About Me',
-                to: '/docs/about',
+                label: "GitHub",
+                href: "https://github.com/abdelrahman72-22",
               },
             ],
           },

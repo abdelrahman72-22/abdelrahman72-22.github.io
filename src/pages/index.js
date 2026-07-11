@@ -12,26 +12,33 @@ function HomepageHeader() {
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
+
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
 
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">
+          {siteConfig.tagline}
+        </p>
 
-        <p style={{ maxWidth: "800px", margin: "2rem auto" }}>
-          A technical knowledge base documenting my learning journey in
-          Windows Internals, WinAPI, Malware Analysis, Malware Development,
-          Reverse Engineering, DFIR, and Cyber Threat Intelligence.
+        <p
+          style={{
+            maxWidth: "850px",
+            margin: "2rem auto",
+            lineHeight: "1.7",
+          }}
+        >
+          Personal research notes, technical write-ups, and projects documenting
+          my journey through Windows Internals, WinAPI, Malware Development,
+          Malware Analysis, and Reverse Engineering.
         </p>
 
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
+            to="/docs/about">
             📚 Documentation
           </Link>
-
-          {" "}
 
           <Link
             className="button button--outline button--lg"
@@ -39,6 +46,7 @@ function HomepageHeader() {
             💻 GitHub
           </Link>
         </div>
+
       </div>
     </header>
   );
@@ -48,7 +56,7 @@ export default function Home() {
   return (
     <Layout
       title="SilentRoot"
-      description="Windows Internals • Malware Research • DFIR • CTI">
+      description="Malware Research • Windows Internals • WinAPI">
       <HomepageHeader />
     </Layout>
   );
