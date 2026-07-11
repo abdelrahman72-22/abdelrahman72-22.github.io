@@ -80,12 +80,6 @@ const config = {
             label: "Blog",
             position: "left",
           },
-
-          {
-            href: "https://github.com/abdelrahman72-22",
-            label: "GitHub",
-            position: "right",
-          },
         ],
       },
 
