@@ -1,58 +1,30 @@
-\# Hi, I'm Abdelrahman 
+---
+sidebar_position: 1
+title: About
+---
 
+# SilentRoot
 
+A personal knowledge base focused on Windows Internals, WinAPI, Malware Development, Malware Analysis, and Reverse Engineering.
 
-Cybersecurity Student | Windows Internals | Malware Research
+This website documents my learning journey through technical notes, research write-ups, and practical projects.
 
-\## About
+## Topics
 
+- Windows Internals
+- WinAPI
+- Malware Development
+- Malware Analysis
+- Reverse Engineering
 
+## Website
 
-I'm a Computer Science student passionate about Windows Internals, Malware Analysis, Malware Development, DFIR, and Cyber Threat Intelligence.
+🌐 https://abdelrahman72-22.github.io
 
+## GitHub
 
+https://github.com/abdelrahman72-22
 
-I'm currently documenting my learning journey, technical notes, and research projects in cybersecurity.
+---
 
-\## Currently Learning
-
-
-
-\- Windows API
-
-\- Windows Internals
-
-\- Malware Development
-
-\- Reverse Engineering
-
-\## Skills
-
-
-
-\- C++
-
-\- Python
-
-\- WinAPI
-
-\- Windows Internals
-
-\- Ghidra
-
-\- IDA Free
-
-\- x64dbg
-
-\- Wireshark
-
-\## Featured Projects
-
-
-
-\- Windows Internals Notes
-
-\- Malware Development
-
-\- Malware Analysis
-
+> This repository powers the SilentRoot website, built with Docusaurus.
