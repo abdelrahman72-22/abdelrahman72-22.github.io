@@ -94,13 +94,16 @@ body {
 }
 
 .hero__title {
-  font-size: 4.5rem;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
   font-weight: 800;
+  line-height: 1.1;
+  word-break: keep-all;
 }
 
 .hero__subtitle {
-  font-size: 1.6rem;
+  font-size: clamp(1.1rem, 4vw, 1.6rem);
   color: #d1d5db;
+  line-height: 1.6;
 }
 
 /* ===========================
@@ -170,4 +173,19 @@ a:hover {
 table {
   border-radius: 10px;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+
+  .hero--primary {
+    padding: 4rem 1rem;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.2rem;
+  }
 }
