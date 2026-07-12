@@ -1,28 +1,16 @@
 ---
 sidebar_position: 1
-title: Introduction
+title: 01. Introduction
 ---
-
 # Windows API Introduction
 
 The **Windows API (WinAPI)** is the primary programming interface provided by Microsoft Windows.
 
-It allows applications to communicate with the operating system and access low-level system services such as:
-
-- Process Management
-- Thread Management
-- Memory Management
-- File System
-- Registry
-- Networking
-- Synchronization
-- Graphical User Interface (GUI)
-
-WinAPI is one of the most important foundations for understanding how Windows works internally.
+It allows applications to communicate directly with the operating system and access low-level system services.
 
 ---
 
-# Why Learn WinAPI?
+## Why Learn WinAPI?
 
 Learning WinAPI helps you:
 
@@ -35,29 +23,70 @@ Learning WinAPI helps you:
 
 ---
 
-# WinAPI Building Blocks
+## Windows Services
 
-The Windows API is built around several core components.
+WinAPI provides access to many operating system services, including:
+
+- Process Management
+- Thread Management
+- Memory Management
+- File System
+- Registry
+- Networking
+- Synchronization
+- Graphical User Interface (GUI)
+
+---
+
+## WinAPI Layers
+
+Most WinAPI functions do not communicate directly with the Windows kernel.
+
+A typical call flow looks like this:
+
+Application
+        │
+        ▼
+Kernel32.dll
+        │
+        ▼
+Ntdll.dll
+        │
+        ▼
+System Call
+        │
+        ▼
+Windows Kernel
+
+As you continue studying Windows Internals, you will learn what happens at each layer.
+
+---
+
+## WinAPI Building Blocks
+
+The Windows API consists of several core components.
 
 | Component | Purpose |
 |-----------|---------|
 | Functions | Perform operating system tasks |
-| Data Types | Standard Windows data types such as `DWORD` and `HANDLE` |
+| Data Types | Standard Windows types such as `DWORD` and `HANDLE` |
 | Structures | Store information passed to WinAPI functions |
-| Handles | References to Windows objects |
+| Handles | References to Windows kernel objects |
 | Constants | Predefined values and flags |
-| Macros | Helper definitions used throughout WinAPI |
+| Macros | Helper definitions |
 | Enumerations | Named constant values |
 
 These components work together to provide access to Windows operating system services.
 
 ---
 
-# Documented vs Undocumented APIs
+## Documented vs Undocumented APIs
 
-## Documented APIs
+Windows APIs can be divided into two categories.
 
-Documented APIs are officially supported by Microsoft and are available in the Microsoft Learn documentation.
+### Documented APIs
+
+Documented APIs are officially supported by Microsoft and are described in Microsoft Learn.
 
 Examples:
 
@@ -68,13 +97,13 @@ CreateProcess()
 GetSystemInfo()
 ```
 
-These APIs are stable and should always be preferred whenever possible.
+These APIs are stable and should always be preferred.
 
 ---
 
-## Undocumented APIs
+### Undocumented APIs
 
-Undocumented APIs exist inside Windows but are not officially documented or supported by Microsoft.
+Undocumented APIs exist inside Windows but are not officially documented.
 
 Examples:
 
@@ -86,22 +115,22 @@ LdrLoadDll()
 RtlCreateUserThread()
 ```
 
-These APIs are commonly used in:
+These APIs are widely used in:
 
 - Windows Internals
 - Reverse Engineering
 - Malware Research
 - Security Research
 
-Because they are undocumented, Microsoft may change their behavior between Windows versions.
+Microsoft may change their implementation between Windows versions.
 
 ---
 
-# Microsoft Learn
+## Microsoft Learn
 
-Microsoft Learn is the official reference for WinAPI.
+Microsoft Learn should always be your primary reference.
 
-Whenever you learn a new API, always check its documentation and understand:
+Whenever you learn a new API, study:
 
 - Function Prototype
 - Parameters
@@ -112,7 +141,7 @@ Whenever you learn a new API, always check its documentation and understand:
 
 ---
 
-# Prerequisites
+## Prerequisites
 
 Before continuing with WinAPI, you should already understand:
 
@@ -122,3 +151,16 @@ Before continuing with WinAPI, you should already understand:
 - Arrays
 - Structures
 - Memory Basics
+
+---
+
+## Summary
+
+After reading this chapter, you should understand:
+
+- What WinAPI is
+- Why WinAPI is important
+- The services provided by WinAPI
+- The building blocks of WinAPI
+- The difference between Documented and Undocumented APIs
+- Why Microsoft Learn should be your primary reference
